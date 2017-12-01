@@ -18,7 +18,7 @@ func ElizaResponse(inputStr string) string {
 	if matched, _ := regexp.MatchString(`(?i).*\bfather\b.*`, input); matched {
 		return "Why don’t you tell me more about your father?"
 	}
-	re := regexp.MustCompile(`(?i)I am ([^.?!]*)[.?!]?`)
+	re := regexp.MustCompile("(?i)" + `(?i)i\'?(?:\s?am|m)([^.?!]*)[.?!]?`)
 	if matched := re.MatchString(input); matched {
 		return re.ReplaceAllString(input, "How do you know you are $1?")
 	}
