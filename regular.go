@@ -24,12 +24,13 @@ func ElizaResponse(inputStr string) string {
 		return re.ReplaceAllString(input, "How do you know you are $1?")
 	}
 	answers := []string{
-		"I’m not sure what you’re trying to say. Could you explain it to me?",
-		"How does that make you feel?",
-		"Why do you say that?",
+		"I’m not sure what you’re trying to say. Could you explain it to me ?",
+		"How does that make you feel ?",
+		"Why do you say that ?",
 		"How often do you see him",
 		"How do you know that you are not sure that I understand the effect my questions are having on you.",
-		"",
+		"How old were they ?",
+		"Why is christmas so special to you",
 	}
 	response := "User input :" + input + " \nOutput :" + answers[rand.Intn(len(answers))]
 	return response
@@ -70,6 +71,7 @@ func main() {
 				"People say I look like both my mother and father.",
 				"Father was a teacher.",
 				"I was my father’s favourite.",
+				"I had 2 older sisters",
 				"I'm looking forward to the weekend.",
 				"My grandfather was French!",
 				"I enjoy visiting my grandfather",
@@ -77,9 +79,8 @@ func main() {
 				"I am not happy with your responses.",
 				"I am not sure that you understand the effect that your questions are having",
 				"I am supposed to just take what you're saying at face value?",
+				"Christmas is my favourite holiday",
 				
-				
-
 			}
 		rand.Seed(time.Now().UTC().UnixNano())
 		
